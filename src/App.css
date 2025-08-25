@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+.container1 {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(assets\landscape-morning-fog-mountains-with-hot-air-balloons-sunrise.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-container {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.heading {
+  font-size: 35px;
+  color: cornflowerblue;
+  margin-bottom: 6px;
+}
+
+input:focus {
+  outline: none;
+  border: none; /* optional, only if you also want no border */
+}
+
+.city {
+  width: 200px;
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid lightsalmon;
+}
+
+.search {
+  border: 1px solid lightskyblue;
+  padding: 6px 8px;
+  border-radius: 10px;
+}
