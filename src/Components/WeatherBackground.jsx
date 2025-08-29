@@ -10,8 +10,9 @@ function WeatherBackground() {
   const [weatherData, setWeatherData] = useState("");
   const [error, setError] = useState("");
 
-  const API_KEY = "ff7e8748f0ed228c27942f4317a2dffb";
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${
+    import.meta.env.VITE_API_KEY
+  }&units=metric`;
 
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -20,6 +21,7 @@ function WeatherBackground() {
       setWeatherData(data);
       setError("");
     } else {
+      setWeatherData(""); // clear old data
       setError("An Error Occured :No Data Found");
     }
   };
